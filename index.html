@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+</head>
+<body>
+    <div class="weather-app">
+        <!-- Left Sidebar -->
+        <div class="sidebar">
+            <div class="search-container">
+                <input type="text" placeholder="Bengaluru" class="search-input">
+                <div class="unit-selector">
+                    °F <span class="dropdown-icon">▼</span>
+                </div>
+                <button class="search-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="current-weather">
+                <div class="weather-icon">
+                    <!-- Weather icon will be inserted by JavaScript -->
+                </div>
+                
+                <div class="current-temp">--.-<span class="degree">°F</span></div>
+                
+                <div class="feels-like">Feels like --.- °F</div>
+                
+                <div class="weather-condition">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+                    </svg>
+                    <span>loading...</span>
+                </div>
+                
+                <div class="current-date">--</div>
+                
+                <div class="current-location">--</div>
+                
+                <div class="time-slider">
+                    <input type="range" min="0" max="100" value="20" class="slider">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Weather Metrics -->
+            <div class="weather-metrics">
+                <div class="metric-card">
+                    <div class="metric-title">Clouds</div>
+                    <div class="metric-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+                        </svg>
+                    </div>
+                    <div class="metric-value">--<span class="metric-unit">%</span></div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-title">UV Index</div>
+                    <div class="metric-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 12h12"></path>
+                            <path d="M12 6v12"></path>
+                        </svg>
+                    </div>
+                    <div class="metric-value">--</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-title">Pressure</div>
+                    <div class="metric-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m12 14 4-4"></path>
+                            <path d="M3.34 19a10 10 0 1 1 17.32 0"></path>
+                        </svg>
+                    </div>
+                    <div class="metric-value">--<span class="metric-unit">hPa</span></div>
+                </div>
+            </div>
+            
+            <!-- Weekly Forecast -->
+            <div class="weekly-forecast">
+                <h2>This Week</h2>
+                
+                <div class="forecast-grid">
+                    <!-- Forecast cards will be inserted by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
